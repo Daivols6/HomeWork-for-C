@@ -6,8 +6,8 @@ namespace home_3
     {
         static void Main(string[] args)
         {
-            /*Task1();*/
-            /*Task2();*/
+            Task1();
+            Task2();
             Task3();
             Task4();
             Task5();
@@ -17,7 +17,7 @@ namespace home_3
             Task9();
 
         }
-        /*public static void Task1()
+        public static void Task1()
         {
             Random random = new Random();
             int[] array = new int[10];
@@ -49,9 +49,9 @@ namespace home_3
             {
                 Console.WriteLine("The number is not included in the array.");
             }
-        }*/
+        }
 
-/*        public static void Task2()
+        public static void Task2()
         {
             int[] array = new int[5];
             Random random = new Random();
@@ -59,10 +59,10 @@ namespace home_3
             bool flag = false;
             for (int i = 0; i < 5; i++)
             {
-                array[i] = random.Next(1,5);
-                if (number != array[i] ) 
+                array[i] = random.Next(1, 5);
+                if (number != array[i])
                 {
-                    Console.Write(array[i]+ " ");
+                    Console.Write(array[i] + " ");
                 }
                 else
                 {
@@ -71,7 +71,7 @@ namespace home_3
             }
             if (flag == true) { Console.WriteLine("\nthere is no such number"); }
 
-        }*/
+        }
         public static void Task3()
         {
             Console.Write("Enter the size of the array: ");
@@ -98,9 +98,9 @@ namespace home_3
                 avg += array[i];
             }
             avg /= array.Length;
-            Console.WriteLine("Максимальное значение: " + max);
-            Console.WriteLine("Минимальное значение: " + min);
-            Console.WriteLine("Среднее значение: " + avg);
+            Console.WriteLine("Max value: " + max);
+            Console.WriteLine("Min value: " + min);
+            Console.WriteLine("Average: " + avg);
 
         }
         public static void Task4()
