@@ -15,10 +15,10 @@ namespace home_2
         public static void Task1()
         {
             Console.WriteLine("Task 1 Please input number");
-            int operand1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Укажите второе число");
-            int operand2 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Выберите действие: *, /, +, -");
+            double operand1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Please input number");
+            double operand2 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("select sign *, /, +, -");
             string sign = Console.ReadLine();
             switch (sign)
             {
@@ -30,7 +30,7 @@ namespace home_2
 
                     if (operand2 == 0)
                     {
-                        Console.WriteLine("Ошибка: деление на ноль невозможно.");
+                        Console.WriteLine("Error: Division by zero is not possible.");
                     }
                     else
                     {
@@ -38,7 +38,7 @@ namespace home_2
                     }
                     break;
                 default:
-                    Console.WriteLine("Ошибка ввода");
+                    Console.WriteLine("Input Error");
                     break;
             }
         }
@@ -86,36 +86,37 @@ namespace home_2
             Console.WriteLine("Task 3 Please input Word (for example Холодно, Жарко и тд.) ");
             string word;
             word = Console.ReadLine();
+            word = word.ToLower();
             switch (word)
             {
-                case "Жарко":
+                case "жарко":
                     Console.WriteLine("hot");
                     break;
-                case "Холодно":
+                case "холодно":
                     Console.WriteLine("cold");
                     break;
-                case "Пасмурно":
+                case "пасмурно":
                     Console.WriteLine("cloudy");
                     break;
-                case "Солнечно":
+                case "солнечно":
                     Console.WriteLine("sunny");
                     break;
-                case "Дождь":
+                case "дождь":
                     Console.WriteLine("rain");
                     break;
-                case "Снег":
+                case "снег":
                     Console.WriteLine("snow");
                     break;
-                case "Гроза":
+                case "гроза":
                     Console.WriteLine("thunderstorm");
                     break;
-                case "Туман":
+                case "туман":
                     Console.WriteLine("fog");
                     break;
-                case "Ветрено":
+                case "ветрено":
                     Console.WriteLine("windy");
                     break;
-                case "Ураган":
+                case "ураган":
                     Console.WriteLine("hurricane");
                     break;
                 default:
