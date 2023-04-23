@@ -6,12 +6,12 @@ namespace home_4
     internal class Program
     {
         static void Main(string[] args)
-        {/*
+        {
             Task1();
             Task2();
             Task3();
             Task4();
-            Task5();*/
+            Task5();
             Task6();
         }
         public static void Task1()
