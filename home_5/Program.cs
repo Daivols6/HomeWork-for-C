@@ -1,5 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace home_5
 {
@@ -61,7 +62,7 @@ namespace home_5
             bestStudentPysical.PrintData();
             Console.WriteLine("Arerage PhysicalEducation: " + newGroup.GetAVGPhysical());
             Console.WriteLine("Rewards: " + Rewards.Reward(bestStudentPysical));
-            
+
             //Group 2
             bestStudentMath = newGroup2.GetBestStudentOfMath();
             bestStudentBiologi = newGroup2.GetBestStudentOfBiology();
@@ -78,24 +79,31 @@ namespace home_5
             bestStudentPysical.PrintData();
             Console.WriteLine("Arerage PhysicalEducation: " + newGroup2.GetAVGPhysical());
             Console.WriteLine("Rewards: " + Rewards.Reward(bestStudentPysical));
-            
+
             //Group3
             bestStudentMath = newGroup3.GetBestStudentOfMath();
             bestStudentBiologi = newGroup3.GetBestStudentOfBiology();
             bestStudentPysical = newGroup3.GetBestStudentOfPhysicalEducation();
             Console.WriteLine("Math");
             bestStudentMath.PrintData();
-            Console.WriteLine("Arerage Math: "+newGroup3.GetAVGMath());
+            Console.WriteLine("Arerage Math: " + newGroup3.GetAVGMath());
             Console.WriteLine("Rewards: " + Rewards.Reward(bestStudentMath));
             Console.WriteLine("\nBiology");
             bestStudentBiologi.PrintData();
-            Console.WriteLine("Arerage Biology: "+newGroup3.GetAVGBiology());
+            Console.WriteLine("Arerage Biology: " + newGroup3.GetAVGBiology());
             Console.WriteLine("Rewards: " + Rewards.Reward(bestStudentBiologi));
             Console.WriteLine("\nPhysicalEducation");
             bestStudentPysical.PrintData();
-            Console.WriteLine("Arerage PhysicalEducation: "+newGroup3.GetAVGPhysical());
+            Console.WriteLine("Arerage PhysicalEducation: " + newGroup3.GetAVGPhysical());
             Console.WriteLine("Rewards: " + Rewards.Reward(bestStudentPysical));
 
+
+            //AVG Group
+            Console.WriteLine
+           ($"{newGroup.GetAVGall():0.##}\n{newGroup2.GetAVGall():0.##}\n{newGroup3.GetAVGall():0.##}");
+            
+            Group BestGroup = Group.PrintAndGetAVGGroup(newGroup, newGroup2, newGroup3);
+            Rewards.MaxRewardsAll(newGroup, newGroup2, newGroup3);
 
         }
     }

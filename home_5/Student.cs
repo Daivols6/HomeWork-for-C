@@ -49,7 +49,7 @@ namespace home_5
 
         public void PrintData()
         {
-            Console.WriteLine($" Id:{Id} Name:{Name} Age:{Age} Group:{Group} BM:{BiologyMark} MM:{MathMark} PEM:{PhysicalEducationMark}");
+            Console.WriteLine($" Id:{Id} Name:{Name} Age:{Age} Group:{Group} BM:{BiologyMark} MM:{MathMark} PEM:{PhysicalEducationMark},Reward:{Reward}");
         }
 
 

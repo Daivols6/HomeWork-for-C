@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace home_5
 {
-    internal class Group //Название класса = Конструктор сам конструктор принимает переменную, которую потом присваивает. 1 слово тип данных
+    public class Group //Название класса = Конструктор сам конструктор принимает переменную, которую потом присваивает. 1 слово тип данных
         //второе имя обьекта, которое будешь использовать. 
     {
         public Student[] Students { get; set; }
@@ -106,6 +106,41 @@ namespace home_5
 
             }
             return mark / Students.Length;
+        }
+        public double GetAVGall()
+        {
+            double mark = 0;
+
+            mark += GetAVGBiology();
+            mark += GetAVGPhysical();
+            mark += GetAVGMath();   
+
+            return mark / 3;
+        }
+        public static Group PrintAndGetAVGGroup(Group newGroup, Group newGroup2, Group newGroup3)
+        {
+            double groupOneAvg = newGroup.GetAVGall();
+            double groupTwoAvg = newGroup2.GetAVGall();
+            double groupTrheeAvg = newGroup3.GetAVGall();
+            double maxAVG;
+            Group maxAVGgrop;
+            if (groupOneAvg > groupTwoAvg && groupOneAvg > groupTrheeAvg)
+            {
+                maxAVGgrop = newGroup;
+                maxAVG = groupOneAvg;
+            }
+            else if (groupTwoAvg > groupTrheeAvg)
+            {
+                maxAVGgrop = newGroup2;
+                maxAVG = groupTwoAvg;
+            }
+            else
+            {
+                maxAVGgrop = newGroup3;
+                maxAVG = groupTrheeAvg;
+            }
+            Console.WriteLine($"Avearage mark of {maxAVGgrop.Students[0].Group} - Math, PhysicalEducation, Biology - {maxAVG:0.##}");
+            return maxAVGgrop;
         }
     }
 }
