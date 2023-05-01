@@ -255,21 +255,40 @@
                         }
 
                         Console.ReadLine();*/
-            Console.Write("Введите кол-во элементов в массиве:\t");
-            int elementCount = int.Parse(Console.ReadLine()); 
-            int[] myArray = new int[elementCount];
+            /*      Console.Write("Введите кол-во элементов в массиве:\t");
+                  int elementCount = int.Parse(Console.ReadLine()); 
+                  int[] myArray = new int[elementCount];
+                  for (int i = 0; i < myArray.Length; i++)
+                  {
+                      Console.WriteLine("\nВведите элемент массива: "+ i);
+                      myArray[i] = int.Parse(Console.ReadLine());
+                  }
+                  Console.WriteLine("Вывод массива:");
+                  for (int i = 0; i < myArray.Length; i++)
+                  {
+                      Console.WriteLine(myArray[i]);
+                  }*/
+            //Обратный перебор массива
+
+            /*            int[] myArray = new int[] {2,43,3,243,1,3,53,6,25,73,22 };
+                        for (int i = myArray.Length - 1; i >= 0  ; i--)
+                        {
+                            Console.WriteLine(myArray[i]);
+                        }*/
+            // Сумма всех четных чисел массива.
+            int[] myArray = new int[] { 2, 43, 3, 243, 1, 3, 53, 6, 25, 73, 22 };
+
+            int result = 0;
             for (int i = 0; i < myArray.Length; i++)
             {
-                Console.WriteLine("\nВведите элемент массива: "+ i);
-                myArray[i] = int.Parse(Console.ReadLine());
+                if (myArray[i] % 2 == 0)
+                {
+                    result += myArray[i];
+                }
             }
-            Console.WriteLine("Вывод массива:");
-            for (int i = 0; i < myArray.Length; i++)
-            {
-                Console.WriteLine(myArray[i]);
-            }
+            Console.WriteLine(result);
 
-
+            Console.ReadLine();
 
         }
     }
