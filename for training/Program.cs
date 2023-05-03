@@ -276,6 +276,7 @@
                             Console.WriteLine(myArray[i]);
                         }*/
             // Сумма всех четных чисел массива.
+
             /*            int[] myArray = new int[] { 2, 43, 3, 243, 1, 3, 53, 6, 25, 73, 22 };
 
                         int result = 0;
@@ -360,6 +361,7 @@
             //Выбрать из строки элементы с.. по..
             string str = "Hello World !!! =)";
             Console.WriteLine(str[6..11]);
+
         }
     }
 }
