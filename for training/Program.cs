@@ -276,19 +276,91 @@
                             Console.WriteLine(myArray[i]);
                         }*/
             // Сумма всех четных чисел массива.
-            int[] myArray = new int[] { 2, 43, 3, 243, 1, 3, 53, 6, 25, 73, 22 };
 
-            int result = 0;
-            for (int i = 0; i < myArray.Length; i++)
-            {
-                if (myArray[i] % 2 == 0)
-                {
-                    result += myArray[i];
-                }
-            }
-            Console.WriteLine(result);
+            /*            int[] myArray = new int[] { 2, 43, 3, 243, 1, 3, 53, 6, 25, 73, 22 };
 
-            Console.ReadLine();
+                        int result = 0;
+                        for (int i = 0; i < myArray.Length; i++)
+                        {
+                            if (myArray[i] % 2 == 0)
+                            {
+                                result += myArray[i];
+                            }
+                        }
+                        Console.WriteLine(result);
+
+                        Console.ReadLine();*/
+            //Наименьшее число в массиве
+            /*            int[] myArray = new int[] { 2, 43, 3, 243, 1, 3, 53, 6, 25, 73, 22 };
+                        int minValue = myArray[0];
+                        for (int i = 1; i < myArray.Length; i++)
+                        {
+                            if (myArray[i] < minValue)
+                            {
+                                minValue = myArray[i];
+                            }
+
+                        }
+                        Console.WriteLine(minValue);*/
+            //LINQ 
+            /*            int[] myArray = new int[] { 2, 43, 3, 243, 1, 3, 53, 6, 25, 73, 22,3,43,25 };
+                        int max = myArray.Max();
+                        int min = myArray.Min();
+                        double avg = myArray.Average();
+                        //минимальное число в массиве
+                        Console.WriteLine(min);
+                        //максимальное число в массиве
+                        Console.WriteLine(max);
+                        //Среднее число в массиве
+                        Console.WriteLine($"{avg:.##}");
+                        //Посчитать сумму четных элементов в массиве
+                        Console.WriteLine(myArray.Where(i => i % 2 == 0).Sum());
+                        // Уникальные значение массива
+                        int[] result = myArray.Distinct().ToArray();
+                        // Отсортировать список в порядк возрастания
+                        int[] result1 = myArray.OrderBy(i => i).ToArray();
+                        // Отсортировать список в порядке убывания
+                        int[] result2 = myArray.OrderByDescending(i => i).ToArray();
+                        Array.Sort(myArray);
+
+                        */
+            /*            //Поиск по массиву, с условием в данном случае больше 70-ти c начала массива и с конца;
+                        int[] myArray = new int[] { 2, 43, 3, 243, 1, 3, 53, 6, 25, 73, 22, 3, 43, 25 };
+                        int result = Array.Find(myArray, i => i > 70);
+                        int result1 = Array.FindLast(myArray, i => i > 70);
+                        // найти все элементы в массиве, соответствующие текущей логике
+                        int[] result2 = Array.FindAll(myArray, i => i > 70);
+                        //поменять порядок массива 
+                        Array.Reverse(myArray);
+                        // сортировка
+                        Array.Sort(myArray);
+                        //очистить 
+                       *//* Array.Clear(myArray);*//*
+                       //число меньше 70
+                        int result3 = myArray.Where(i=> i < 70).First();
+                        //если нет в списке, возвращает дефолт. 
+                        int result4 = myArray.Where(i=> i < 0).FirstOrDefault();
+
+                        Console.WriteLine(result);
+                        Console.WriteLine(result1);
+                        Console.WriteLine(result3);
+                        Console.WriteLine(result4);
+            */
+            //Индексы и диапазоны
+            /*
+                        int[] myArray = new int[] { 2, 43, 3, 243, 1, 3, 53, 6, 25, 73, 22, 3, 43, 25 };
+                        //Извлечь массив с какого элемента по какой[4..5],[..5]
+                        int[] myArray2 = myArray[5..];
+                        Index myIndex = ^5;// new Index(5,true) вариант записи
+                        Range myRange = 1..4;// new Range(1,4);
+                        int[] myArray3 = myArray[myRange];
+                        //Поиск элемента с конца
+
+                        Console.WriteLine(myArray[myIndex]);
+                        Console.WriteLine($"value {myIndex.Value} isFormEnd {myIndex.IsFromEnd}");*/
+            //Выбрать из строки элементы с.. по..
+            string str = "Hello World !!! =)";
+            Console.WriteLine(str[6..11]);
 
         }
     }
