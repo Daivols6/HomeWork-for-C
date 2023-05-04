@@ -276,19 +276,188 @@
                             Console.WriteLine(myArray[i]);
                         }*/
             // Сумма всех четных чисел массива.
-            int[] myArray = new int[] { 2, 43, 3, 243, 1, 3, 53, 6, 25, 73, 22 };
 
-            int result = 0;
-            for (int i = 0; i < myArray.Length; i++)
+            /*            int[] myArray = new int[] { 2, 43, 3, 243, 1, 3, 53, 6, 25, 73, 22 };
+
+                        int result = 0;
+                        for (int i = 0; i < myArray.Length; i++)
+                        {
+                            if (myArray[i] % 2 == 0)
+                            {
+                                result += myArray[i];
+                            }
+                        }
+                        Console.WriteLine(result);
+
+                        Console.ReadLine();*/
+            //Наименьшее число в массиве
+            /*            int[] myArray = new int[] { 2, 43, 3, 243, 1, 3, 53, 6, 25, 73, 22 };
+                        int minValue = myArray[0];
+                        for (int i = 1; i < myArray.Length; i++)
+                        {
+                            if (myArray[i] < minValue)
+                            {
+                                minValue = myArray[i];
+                            }
+
+                        }
+                        Console.WriteLine(minValue);*/
+            //LINQ 
+            /*            int[] myArray = new int[] { 2, 43, 3, 243, 1, 3, 53, 6, 25, 73, 22,3,43,25 };
+                        int max = myArray.Max();
+                        int min = myArray.Min();
+                        double avg = myArray.Average();
+                        //минимальное число в массиве
+                        Console.WriteLine(min);
+                        //максимальное число в массиве
+                        Console.WriteLine(max);
+                        //Среднее число в массиве
+                        Console.WriteLine($"{avg:.##}");
+                        //Посчитать сумму четных элементов в массиве
+                        Console.WriteLine(myArray.Where(i => i % 2 == 0).Sum());
+                        // Уникальные значение массива
+                        int[] result = myArray.Distinct().ToArray();
+                        // Отсортировать список в порядк возрастания
+                        int[] result1 = myArray.OrderBy(i => i).ToArray();
+                        // Отсортировать список в порядке убывания
+                        int[] result2 = myArray.OrderByDescending(i => i).ToArray();
+                        Array.Sort(myArray);
+
+                        */
+            /*            //Поиск по массиву, с условием в данном случае больше 70-ти c начала массива и с конца;
+                        int[] myArray = new int[] { 2, 43, 3, 243, 1, 3, 53, 6, 25, 73, 22, 3, 43, 25 };
+                        int result = Array.Find(myArray, i => i > 70);
+                        int result1 = Array.FindLast(myArray, i => i > 70);
+                        // найти все элементы в массиве, соответствующие текущей логике
+                        int[] result2 = Array.FindAll(myArray, i => i > 70);
+                        //поменять порядок массива 
+                        Array.Reverse(myArray);
+                        // сортировка
+                        Array.Sort(myArray);
+                        //очистить 
+                       *//* Array.Clear(myArray);*//*
+                       //число меньше 70
+                        int result3 = myArray.Where(i=> i < 70).First();
+                        //если нет в списке, возвращает дефолт. 
+                        int result4 = myArray.Where(i=> i < 0).FirstOrDefault();
+
+                        Console.WriteLine(result);
+                        Console.WriteLine(result1);
+                        Console.WriteLine(result3);
+                        Console.WriteLine(result4);
+            */
+            //Индексы и диапазоны
+            /*
+                        int[] myArray = new int[] { 2, 43, 3, 243, 1, 3, 53, 6, 25, 73, 22, 3, 43, 25 };
+                        //Извлечь массив с какого элемента по какой[4..5],[..5]
+                        int[] myArray2 = myArray[5..];
+                        Index myIndex = ^5;// new Index(5,true) вариант записи
+                        Range myRange = 1..4;// new Range(1,4);
+                        int[] myArray3 = myArray[myRange];
+                        //Поиск элемента с конца
+
+                        Console.WriteLine(myArray[myIndex]);
+                        Console.WriteLine($"value {myIndex.Value} isFormEnd {myIndex.IsFromEnd}");*/
+            //Выбрать из строки элементы с.. по..
+            /*            string str = "Hello World !!! =)";
+                        Console.WriteLine(str[6..11]);*/
+            //двумерный массив 
+            //Тип данных[,] имя массива
+            //Вывод массива в строку
+            /*  foreach (var i in integer) 
+              {
+                  Console.Write(i + " ");
+              }
+
+              //вывод данных из массива
+              Console.WriteLine(integer[2,3]);
+            //сколько измерений содержит
+              Console.WriteLine(integer.Rank);
+            
+             */
+            /*//Вывод в массива на консоль с табуляцией
+            int[,] integer;
+            integer = new int[,]
             {
-                if (myArray[i] % 2 == 0)
+                {1, 2, 3, 4,5},
+                {5, 6, 7, 8,9},
+                {9, 10, 11, 12,13},
+                {13,14, 15, 16,17}
+            };
+            int height = integer.GetLength(0);
+            int width = integer.GetLength(1);
+            for (int y = 0; y < height; y++)
+            {
+                for (int x = 0; x < width; x++)
                 {
-                    result += myArray[i];
+                    Console.Write(integer[y,x]+"\t");
+                }
+                Console.WriteLine();
+            }*/
+
+            //Автозаполнение массива
+            /*int[,] integer;
+            integer = new int[10, 6];
+            
+            Random random = new Random();
+
+            for (int y = 0; y < integer.GetLength(0); y++)
+            {
+                for (int x = 0; x < integer.GetLength(1); x++)
+                {
+                    integer[y, x] = random.Next(0,255);
                 }
             }
-            Console.WriteLine(result);
+                    
+            
+            for (int y = 0; y < integer.GetLength(0); y++)
+            {
+                for (int x = 0; x < integer.GetLength(1); x++)
+                {
+                    Console.Write(integer[y, x] + "\t");
+                }
+                Console.WriteLine();
+            }
 
-            Console.ReadLine();
+*/
+            /*            Ввод данных для массива с консоли.
+             *            int[,] integer;
+                        integer = new int[2, 3];
+
+
+
+                       for (int y = 0; y < integer.GetLength(0); y++)
+                        {
+                            for (int x = 0; x < integer.GetLength(1); x++)
+                            {
+                                Console.WriteLine($"Y: {y} X: {x}");
+                                integer[y, x] = int.Parse(Console.ReadLine());
+                            }
+                        }
+
+
+                        for (int y = 0; y < integer.GetLength(0); y++)
+                        {
+                            for (int x = 0; x < integer.GetLength(1); x++)
+                            {
+                                Console.Write(integer[y, x] + "\t");
+                            }
+                            Console.WriteLine();
+                        }*/
+            int[][] myArray = new int[3][];
+            int[,] myArray2 = new int[3, 5];
+
+            int myArrayRank = myArray.Rank;
+            int myArrayRank2 = myArray2.Rank;
+
+            int myArrayLenth = myArray.Length;
+            int myArrayLenth2 = myArray2.Length;
+            Console.WriteLine(myArrayLenth);
+            Console.WriteLine(myArrayRank);
+            Console.WriteLine(myArrayRank2);
+            Console.WriteLine(myArrayLenth2);
+
+
 
         }
     }
