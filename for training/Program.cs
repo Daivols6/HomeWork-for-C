@@ -356,11 +356,117 @@
                         int[] myArray3 = myArray[myRange];
                         //Поиск элемента с конца
 
+
+                        Console.WriteLine(myArray[myIndex]);
+                        Console.WriteLine($"value {myIndex.Value} isFormEnd {myIndex.IsFromEnd}");*/
+            //Выбрать из строки элементы с.. по..
+            /*            string str = "Hello World !!! =)";
+                        Console.WriteLine(str[6..11]);*/
+            //двумерный массив 
+            //Тип данных[,] имя массива
+            //Вывод массива в строку
+            /*  foreach (var i in integer) 
+              {
+                  Console.Write(i + " ");
+              }
+
+              //вывод данных из массива
+              Console.WriteLine(integer[2,3]);
+            //сколько измерений содержит
+              Console.WriteLine(integer.Rank);
+            
+             */
+            /*//Вывод в массива на консоль с табуляцией
+            int[,] integer;
+            integer = new int[,]
+            {
+                {1, 2, 3, 4,5},
+                {5, 6, 7, 8,9},
+                {9, 10, 11, 12,13},
+                {13,14, 15, 16,17}
+            };
+            int height = integer.GetLength(0);
+            int width = integer.GetLength(1);
+            for (int y = 0; y < height; y++)
+            {
+                for (int x = 0; x < width; x++)
+                {
+                    Console.Write(integer[y,x]+"\t");
+                }
+                Console.WriteLine();
+            }*/
+
+            //Автозаполнение массива
+            /*int[,] integer;
+            integer = new int[10, 6];
+            
+            Random random = new Random();
+
+            for (int y = 0; y < integer.GetLength(0); y++)
+            {
+                for (int x = 0; x < integer.GetLength(1); x++)
+                {
+                    integer[y, x] = random.Next(0,255);
+                }
+            }
+                    
+            
+            for (int y = 0; y < integer.GetLength(0); y++)
+            {
+                for (int x = 0; x < integer.GetLength(1); x++)
+                {
+                    Console.Write(integer[y, x] + "\t");
+                }
+                Console.WriteLine();
+            }
+
+*/
+            /*            Ввод данных для массива с консоли.
+             *            int[,] integer;
+                        integer = new int[2, 3];
+
+
+
+                       for (int y = 0; y < integer.GetLength(0); y++)
+                        {
+                            for (int x = 0; x < integer.GetLength(1); x++)
+                            {
+                                Console.WriteLine($"Y: {y} X: {x}");
+                                integer[y, x] = int.Parse(Console.ReadLine());
+                            }
+                        }
+
+
+                        for (int y = 0; y < integer.GetLength(0); y++)
+                        {
+                            for (int x = 0; x < integer.GetLength(1); x++)
+                            {
+                                Console.Write(integer[y, x] + "\t");
+                            }
+                            Console.WriteLine();
+                        }*/
+            int[][] myArray = new int[3][];
+            int[,] myArray2 = new int[3, 5];
+
+            int myArrayRank = myArray.Rank;
+            int myArrayRank2 = myArray2.Rank;
+
+            int myArrayLenth = myArray.Length;
+            int myArrayLenth2 = myArray2.Length;
+            Console.WriteLine(myArrayLenth);
+            Console.WriteLine(myArrayRank);
+            Console.WriteLine(myArrayRank2);
+            Console.WriteLine(myArrayLenth2);
+
+
+
+
                         Console.WriteLine(myArray[myIndex]);
                         Console.WriteLine($"value {myIndex.Value} isFormEnd {myIndex.IsFromEnd}");*/
             //Выбрать из строки элементы с.. по..
             string str = "Hello World !!! =)";
             Console.WriteLine(str[6..11]);
+
 
         }
     }
