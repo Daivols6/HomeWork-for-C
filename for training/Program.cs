@@ -356,6 +356,7 @@
                         int[] myArray3 = myArray[myRange];
                         //Поиск элемента с конца
 
+
                         Console.WriteLine(myArray[myIndex]);
                         Console.WriteLine($"value {myIndex.Value} isFormEnd {myIndex.IsFromEnd}");*/
             //Выбрать из строки элементы с.. по..
@@ -457,6 +458,14 @@
             Console.WriteLine(myArrayRank2);
             Console.WriteLine(myArrayLenth2);
 
+
+
+
+                        Console.WriteLine(myArray[myIndex]);
+                        Console.WriteLine($"value {myIndex.Value} isFormEnd {myIndex.IsFromEnd}");*/
+            //Выбрать из строки элементы с.. по..
+            string str = "Hello World !!! =)";
+            Console.WriteLine(str[6..11]);
 
 
         }
