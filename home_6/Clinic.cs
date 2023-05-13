@@ -18,8 +18,18 @@ namespace home_6
         static void Main(string[] args)
         {
             {
-                Patient patient1 = new Patient_Builder();
+                //Создаем пациентов
+                Patient[] patient1 = new Patient_Builder().BuildPatient(5);
+                //Выводим информацию о пациентах на экран
+                Patient.PrintData(patient1);
+                //Вывод информации о врачах на экран
+                ManagmenClinic man = new ManagmenClinic(patient1);
+                man.PrintData();
+                man.TreatClinic();
+                // Клиника которая умеет лечить пациентов
                 
+
+
             }
 
         }

@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace home_6
 {
-    public class therapist
+    public class Therapist : Doctor
     {
-        public int id;
-        public string name;
-        public string specializations;
-        public void Treat()
+        public Therapist(string name, int age, int id) : base(name, age, id, "therapist")
         {
-            Console.WriteLine("Treat as a therapist");
+         
+        }
+
+        public override void Treat()
+        {
+            Console.WriteLine("\tTreat as a therapist");
         }
     }
 }

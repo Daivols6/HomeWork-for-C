@@ -8,7 +8,7 @@ namespace home_6
 {
    class Patient_Builder: Patient
     {
-
+    
 
     List<string> names = new List<string> { "Roman", "Dimon", "Alex", "Vasya", "Masha", "Anna", "Vadim" };
 
@@ -20,6 +20,7 @@ namespace home_6
         {
             Random random = new Random();
             patient[i] = new Patient();
+            patient[i].id = i;
             int age = random.Next(18, 30);
             var name = names[random.Next(0, names.Count)];
             patient[i].name = name;
@@ -29,6 +30,7 @@ namespace home_6
         }
         return patient;
     }
+
 
  }
 

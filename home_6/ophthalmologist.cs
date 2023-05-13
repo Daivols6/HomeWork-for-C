@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 namespace home_6
 {
-    public class ophthalmologist
+    public class Ophthalmologist: Doctor
     {
-        public int id;
-        public string name;
-        public string specializations;
-        public void Treat()
+
+
+        public Ophthalmologist(string name, int age, int id) : base(name, age, id, "ophthalmologist")
         {
-            Console.WriteLine("Treat as a ophthalmologist");
+        }
+
+        public override void Treat()
+        {
+            Console.WriteLine("\tTreat as a ophthalmologist");
         }
     }
 }
