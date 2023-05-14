@@ -9,8 +9,34 @@ namespace for_training
 {
     class Point
     {
-        public int x;
-        public int y;
+        public Point(int x, int y)
+        {
+            X = x;
+            Y = y;
+        }
+        public void SetX(int x)
+        {
+            this.X = x;
+        }
+        public void SetY(int y)
+        {
+            if (y < 1)
+            {
+                this.Y = 1;
+                return;
+            }
+            if (y > 1)
+            {
+                this.Y = 5;
+                return;
+            }
+        }
+        public int GetX()
+        {
+            return X;
+        }
+        private int X;
+        private int Y;
         public Color color;
         public enum Color
         {
@@ -20,6 +46,24 @@ namespace for_training
             Yellow,
             Orange
         }
+        public void Print()
+        {
+            Console.WriteLine($"X:{X}, Y:{Y}");
+        }
+        private int z;
+
+        public int Z
+        {
+            get
+            {
+                return z;
+            }
+            set
+            {
+                z = value;
+            }
+        }
+
 
     }
     /*internal class Class1

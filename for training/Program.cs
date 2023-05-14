@@ -866,27 +866,48 @@ namespace for_training
         
         static void Main(string[] args)
         {
+            /*
+                        Point p = new();
+                        p.x = 10;
+                        p.y = 20;
+                        p.color = Point.Color.Red;
+                        Console.WriteLine($"{p.y},{p.x}");
 
-            Point p = new();
-            p.x = 10;
-            p.y = 20;
-            p.color = Point.Color.Red;
-            Console.WriteLine($"{p.y},{p.x}");
+                        var firstStudent = Student.GetStudent();
+                        Student.PrintData(firstStudent);
+                        Console.WriteLine(firstStudent.GetFullNameP());
+                        //ООП
+                        //Методы обьекта класса
+                         var car = new Car();
+                        car.PrintSpeed();
+                        car.DriveForward();
+                        car.PrintSpeed();
+                        car.Stop();
+                        car.PrintSpeed();
+                        car.DriveBackward();
+                        car.PrintSpeed();*/
 
-            var firstStudent = Student.GetStudent();
-            Student.PrintData(firstStudent);
-            Console.WriteLine(firstStudent.GetFullNameP());
-            //ООП
-            //Методы обьекта класса
-             var car = new Car();
-            car.PrintSpeed();
-            car.DriveForward();
-            car.PrintSpeed();
-            car.Stop();
-            car.PrintSpeed();
-            car.DriveBackward();
-            car.PrintSpeed();
+            /*            Access point = new Access();
 
+
+                        point.PrintX();
+                       *//* point.PrintY();*//*
+                        point.PrintPoint();*/
+            /*            GUN gun = new GUN(true);
+                        GUN gun2 = new GUN();
+                        gun2.Shoot();
+                       gun.Shoot();
+                        Point point = new(5, 3);
+                        point.Print();
+            */
+            Point point = new(5, 3);
+            point.SetX(54);
+            Console.WriteLine(point.GetX());
+            point.Print();
+            point.SetY(34);
+            point.Print();
+            point.Z = 10;
+            int z = point.Z;
         }
 
 
